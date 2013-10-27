@@ -1,17 +1,30 @@
 {
   "name": "full-url",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A function that returns the full URL of a request, including the scheme and host.",
   "main": "index.js",
+  "browser": "browser.js",
   "directories": {
     "test": "test"
   },
   "devDependencies": {
     "request": "~2.27.0",
-    "tap": "~0.4.4"
+    "tape": "~2.0.0"
   },
   "scripts": {
-    "test": "tap test/*.js 8989"
+    "test": "tape test/server.js"
+  },
+  "testling": {
+    "files": "test/browser.js",
+    "browsers": {
+      "ie": [6, 7, 8, 9, 10],
+      "chrome": [25, 29],
+      "firefox": [4, 19, 24],
+      "safari": [5, 6.1],
+      "opera": [10, 12, 15],
+      "iphone": [5.1, 6],
+      "android": [4.2]
+    }
   },
   "repository": {
     "type": "git",

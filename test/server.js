@@ -1,8 +1,8 @@
-var run = require('tap').test
+var run = require('tape').test
 var server = require('http').createServer
 var request = require('request')
 var full = require('../')
-var port = process.argv[2] || 8080
+var port = 25825
 var root = 'http://localhost:' + port
 
 var noop = server(function(req, res) {
