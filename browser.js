@@ -1,10 +1,17 @@
+var strip = function(string, pattern) {
+  return string.replace(pattern, '') 
+}
+
 module.exports = function(pathname) {
   var origin = (location.origin ?
     location.origin :
     location.protocol + '//' + location.host
   )
-  if (pathname[0] !== '/') {
-    pathname = '/' + pathname
-  }
-  return origin + pathname
+
+  var url = [
+    strip(origin, /\/$/),
+    strip(pathname, /^\//)
+  ]
+
+  return url.join('/')
 }
