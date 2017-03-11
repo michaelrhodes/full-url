@@ -1,6 +1,6 @@
 {
   "name": "full-url",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "A function that returns the full URL of a request, including the scheme and host.",
   "main": "index.js",
   "browser": "browser.js",
